@@ -105,3 +105,5 @@ I have added two buyer and seller user in seed.rb file, and two products as well
     EX: curl --location --request POST 'localhost:3000/logout/all' \
 				--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDA4NzMzMjR9.X7FkSb7beu1fVYY48kDEEFOtwoaOYrll9rWWduImjis'
 
+
+Note: I have also added postman collection with the project please have a  look on file vending-machine-api.postman_collection.json
