@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amountAvailable: 100
+  cost: 5
+  productName: MyString
+  user: seller
+
+two:
+  amountAvailable: 1
+  cost: 10
+  productName: MyString
+  user: seller

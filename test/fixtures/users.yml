@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+buyer:
+  username: user_buyer
+  deposit: 100
+  role: 1
+  password_digest: <%= BCrypt::Password.create("12345678")%>
+
+seller:
+  username: user_seller
+  deposit: 0
+  role: 0
+  password_digest: <%= BCrypt::Password.create("12345678")%>
