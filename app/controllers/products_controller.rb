@@ -34,8 +34,9 @@ class ProductsController < ApplicationController
   end
 
   def reset
+    coin_change = @current_user.get_change
     if @current_user.update(deposit: 0)
-      render json: @current_user
+      render json: {user: @current_user, coin_change: coin_change}, status: :ok
     else
       render json: @current_user, status: :unprocessable_entity
     end

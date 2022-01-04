@@ -34,8 +34,9 @@ I have added buyer and seller user in seed.rb file, and two products as well so 
 
     * POST localhost:3000/login with params username, password 
       
-      EX: curl --location --request 
-          POST 'localhost:3000/login?username=test_buyer&password=12345678'
+      EX: curl --location --request POST 'localhost:3000/login' \
+          --form 'username="user1"' \
+          --form 'password="12345678"'
 
 
   * Create Product
@@ -95,6 +96,24 @@ I have added buyer and seller user in seed.rb file, and two products as well so 
 
       EX: curl --location --request POST 'localhost:3000/reset' \
           --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDA3ODkyMTh9.cTifQsE8DpVp5b2RJDhUMoryn75ASkOtXR1DvALHM5Q'
+
+      Response:
+
+        {
+            "user": {
+                "id": 7,
+                "role": "buyer",
+                "deposit": 0,
+                "password_digest": "$2a$12$j.cBOTwoS0YouJ4cl/Bc1eqXjyiSPcqtzIPtcF.y1wNFF7wddMPu2",
+                "username": "user3",
+                "created_at": "2022-01-04T10:13:41.177Z",
+                "updated_at": "2022-01-04T11:24:12.484Z"
+            },
+            "coin_change": [
+                10,
+                5
+            ]
+        }
 
   * Logout all sessions
 

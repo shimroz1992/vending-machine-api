@@ -235,6 +235,15 @@
 				"url": null
 			},
 			"response": []
+		},
+		{
+			"name": "delelte product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
 		}
 	]
 }

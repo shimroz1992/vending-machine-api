@@ -28,4 +28,24 @@ class User < ApplicationRecord
   def invalid_token?(token)
   	!jwt_tokens.where(token: token).present?
   end
+
+  def get_change
+    return 0 if self.deposit <= 0
+    change = [100,50,20,10,5]
+    coins = []
+    amount = self.deposit
+    i=0
+    while amount != 0 && i <= (change.length - 1)
+      while amount >= change[i]
+         amount = amount - change[i]
+         coins.push(change[i])
+      end
+      i+=1
+    end
+    if coins.empty? && amount > 0
+      "No change found for amount #{amount}"
+    else
+      coins
+    end
+  end
 end
